@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divKOUHE7XVPRLG7L0"></div>
+        <div class="lime top_div" id="top_div03KVAQ4SNTJUDUK"></div>
         
         <script>
-        var top_div = d3.select('#top_divKOUHE7XVPRLG7L0').classed('lime top_div', true);
+        var top_div = d3.select('#top_div03KVAQ4SNTJUDUK').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["0", "1"], [0.999872088432312, 0.00012792863708455116]);
+            var pp = new lime.PredictProba(pp_svg, ["0", "1"], [0.9999960660934448, 3.956376986025134e-06]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["0", "1"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["duration <= -0.42", -0.3825371500408506], ["5.00 < month <= 7.00", -0.19789559091594083], ["0.00 < housing <= 1.00", -0.07627900144496501], ["contact <= 0.00", 0.07102747267509923], ["balance <= -0.41", -0.05972661065311922], ["1.00 < education <= 2.00", 0.05691642585597172], ["campaign <= 1.00", 0.041370235307182486], ["loan <= 0.00", 0.040217017801433205], ["default <= 0.00", -0.03123972531721233], ["16.00 < day <= 22.00", -0.02225535437070456]], 1, exp_div);
+                exp.show([["duration <= -0.42", -0.37290310456510134], ["month > 7.00", -0.08013211042466006], ["0.00 < housing <= 1.00", -0.0647549954284431], ["1.00 < education <= 2.00", 0.056063745569117515], ["campaign <= 1.00", 0.04886041826800577]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["duration", "-0.55", -0.3825371500408506], ["month", "7.00", -0.19789559091594083], ["housing", "1.00", -0.07627900144496501], ["contact", "0.00", 0.07102747267509923], ["balance", "-0.43", -0.05972661065311922], ["education", "2.00", 0.05691642585597172], ["campaign", "1.00", 0.041370235307182486], ["loan", "0.00", 0.040217017801433205], ["default", "0.00", -0.03123972531721233], ["day", "21.00", -0.02225535437070456]], 1, raw_div);
+            exp.show_raw_tabular([["duration", "-0.70", -0.37290310456510134], ["month", "11.00", -0.08013211042466006], ["housing", "1.00", -0.0647549954284431], ["education", "2.00", 0.056063745569117515], ["campaign", "1.00", 0.04886041826800577]], 1, raw_div);
         
         </script>
         </body></html>
