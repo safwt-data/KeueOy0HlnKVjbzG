@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div03KVAQ4SNTJUDUK"></div>
+        <div class="lime top_div" id="top_div75UZOXAT2VTHJYT"></div>
         
         <script>
-        var top_div = d3.select('#top_div03KVAQ4SNTJUDUK').classed('lime top_div', true);
+        var top_div = d3.select('#top_div75UZOXAT2VTHJYT').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["0", "1"], [0.9999960660934448, 3.956376986025134e-06]);
+            var pp = new lime.PredictProba(pp_svg, ["0", "1"], [0.9981482625007629, 0.00185172981582582]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["0", "1"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["duration <= -0.42", -0.37290310456510134], ["month > 7.00", -0.08013211042466006], ["0.00 < housing <= 1.00", -0.0647549954284431], ["1.00 < education <= 2.00", 0.056063745569117515], ["campaign <= 1.00", 0.04886041826800577]], 1, exp_div);
+                exp.show([["month <= 5.00", 0.19107048866071757], ["0.00 < housing <= 1.00", -0.06323019828459303], ["0.22 < duration <= 1.56", -0.06040078828630488], ["1.00 < education <= 2.00", 0.057537467334323376], ["8.00 < day <= 16.00", 0.0573823344443302]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["duration", "-0.70", -0.37290310456510134], ["month", "11.00", -0.08013211042466006], ["housing", "1.00", -0.0647549954284431], ["education", "2.00", 0.056063745569117515], ["campaign", "1.00", 0.04886041826800577]], 1, raw_div);
+            exp.show_raw_tabular([["month", "5.00", 0.19107048866071757], ["housing", "1.00", -0.06323019828459303], ["duration", "0.50", -0.06040078828630488], ["education", "2.00", 0.057537467334323376], ["day", "12.00", 0.0573823344443302]], 1, raw_div);
         
         </script>
         </body></html>
