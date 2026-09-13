@@ -22,7 +22,6 @@ identifying high-potential customer segments, and explaining the key factors inf
 
 - [Project Overview](#-project-overview)
 - [Business Questions](#-business-questions)
-- [Dataset](#-dataset)
 - [Project Workflow](#-project-workflow)
 - [1. Data Preparation](#1-data-preparation)
 - [2. Customer Segmentation](#2-customer-segmentation)
@@ -66,37 +65,6 @@ The analysis focuses on three main questions:
 1. **Can customer subscription to a term deposit be predicted?**
 2. **Which variables contribute most strongly to the prediction?**
 3. **Which customer segments show the highest historical subscription rates and should receive greater marketing attention?**
-
----
-## 📊 Dataset
-
-The dataset contains **40,000 customer records** and **14 variables**, including:
-
-- Age
-- Job
-- Marital status
-- Education
-- Credit default status
-- Account balance
-- Housing loan
-- Personal loan
-- Contact method
-- Contact day and month
-- Last-contact duration
-- Number of contacts during the campaign
-- Subscription outcome (`y`)
-
-The target variable is binary:
-
-- `0` = Not subscribed
-- `1` = Subscribed
-
-The target is strongly imbalanced:
-
-- **92.76%** did not subscribe
-- **7.24%** subscribed
-
-This imbalance makes metrics such as **precision, recall, and F1-score** especially important in addition to overall accuracy.
 
 ---
 
