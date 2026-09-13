@@ -1,6 +1,20 @@
-# 🏦 Bank Term Deposit Subscription Prediction
+<h1 align="center">🏦 Customer Investment Subscription Prediction</h1>
 
-A machine learning classification project designed to identify customers who are more likely to subscribe to a term-deposit investment product, understand the factors influencing those predictions, and translate model results into actionable customer segments for marketing prioritization.
+<p align="center">
+A machine learning classification project for predicting customer subscription to a term-deposit investment product,
+identifying high-potential customer segments, and explaining the key factors influencing subscription predictions.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue" alt="Python">
+  <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-purple" alt="Pandas">
+  <img src="https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange" alt="Scikit-learn">
+  <img src="https://img.shields.io/badge/XGBoost-Classification-red" alt="XGBoost">
+  <img src="https://img.shields.io/badge/Best%20Model-Tuned%20XGBoost-green" alt="Best Model">
+  <img src="https://img.shields.io/badge/EDA-93%25-brightgreen" alt="EDA">
+  <img src="https://img.shields.io/badge/Explainable%20AI-SHAP%20%7C%20LIME-blueviolet" alt="Explainable AI">
+  <img src="https://img.shields.io/badge/Class%20Imbalance-Handled-yellow" alt="Class Imbalance">
+</p>
 
 ---
 
