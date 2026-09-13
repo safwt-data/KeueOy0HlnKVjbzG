@@ -11,7 +11,7 @@ identifying high-potential customer segments, and explaining the key factors inf
   <img src="https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange" alt="Scikit-learn">
   <img src="https://img.shields.io/badge/XGBoost-Classification-red" alt="XGBoost">
   <img src="https://img.shields.io/badge/Best%20Model-Tuned%20XGBoost-green" alt="Best Model">
-  <img src="https://img.shields.io/badge/EDA-93%25-brightgreen" alt="EDA">
+  <img src="https://img.shields.io/badge/FE-Feature%20Engineering-brightgreen" alt="Feature Engineering"> 
   <img src="https://img.shields.io/badge/Explainable%20AI-SHAP%20%7C%20LIME-blueviolet" alt="Explainable AI">
   <img src="https://img.shields.io/badge/Class%20Imbalance-Handled-yellow" alt="Class Imbalance">
 </p>
