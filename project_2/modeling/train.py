@@ -7,15 +7,13 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import RandomOverSampler
 
-from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from xgboost import XGBClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report
-import pickle
 
 from project_2.modeling.dataset import load_data
 
@@ -112,7 +110,6 @@ if __name__ == "__main__":
     nominal_vars(df)
     ordinal_vars(df)
     split_data(df)
-
     X_train, X_test, y_train, y_test = split_data(df)
     transformers(X_train, X_test)
     over_sampling(X_train, y_train)
@@ -141,7 +138,7 @@ if __name__ == "__main__":
                          scale_pos_weight = 25,
                            max_depth = 35, 
                            learning_rate = 0.6)
-    trained_xgboost_tuned = train_model(xgboost_tuned,X_train,y_train)
+    trained_xgboost_tuned = train_model(xgboost_tuned, X_train, y_train)
     
 
 
