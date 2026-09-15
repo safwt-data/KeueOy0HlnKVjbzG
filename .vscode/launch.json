@@ -5,7 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Module",
+            "name": "Predict",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "project_2.modeling.predict"
+        },
+        {
+            "name": "Train",
             "type": "debugpy",
             "request": "launch",
             "module": "project_2.modeling.train"
