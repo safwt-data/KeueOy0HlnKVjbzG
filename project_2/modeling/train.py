@@ -15,8 +15,6 @@ from sklearn.tree import DecisionTreeClassifier
 from xgboost import XGBClassifier
 from sklearn.ensemble import RandomForestClassifier
 
-from project_2.modeling.dataset import load_data
-
 def nominal_vars(df):
     logging.info("Dealing with the nominal variables")
     df['default'] = df['default'].map({'yes': 1, 'no': 0})
