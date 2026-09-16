@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "features",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "project_2.modeling.features"
+        },
+        {
             "name": "Predict",
             "type": "debugpy",
             "request": "launch",

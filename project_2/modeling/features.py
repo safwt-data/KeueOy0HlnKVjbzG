@@ -1,5 +1,13 @@
 
-import logging 
+import logging
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+import category_encoders as ce
+import missingno as msno
+
 from project_2.modeling.dataset import load_data
 from project_2.modeling.train import split_data
 from project_2.modeling.train import split_data
@@ -42,24 +50,20 @@ def ordinal_vars(df):
 
 def missing_data(df):
     missing = df.isna().sum()/len(df)
+    logging.info("Missing data:\n%s", missing)
     matrix_missing = msno.matrix(df)
     plt.show()
-    plt.savefig("../reports/figures/missing_matrix.png")
     logging.info("Run missingness successfully")
     return missing, matrix_missing
 
 def histgrams(df):
     age = sns.histplot(df['age'])
-    plt.savefig("../reports/figures/histogram_age.png")
     plt.show()
     balance = sns.histplot(df['balance'])
-    plt.savefig("../reports/figures/histogram_balance.png")
     plt.show()
     duration = sns.histplot(df['duration'])
-    plt.savefig("../reports/figures/histogram_duration.png")
     plt.show()
     day = sns.histplot(df['day'])
-    plt.savefig("../reports/figures/histogram_day.png")
     logging.info("Histogram run successfully")
     plt.show()
 
@@ -80,8 +84,12 @@ def outlier_analysis(df, column):
     # Combine the masks to filter for outliers
     outliers = df[column][is_lower_q | is_higher_q] 
     # Count and print the number of outliers
+    logging.info(
+        "Number of outliers in %s: %s",
+        column,
+        len(outliers)
+    )
     print(len(outliers))
-    logging.info("Outliers run successfully")
     return outliers
 
 def correlation_matrix(df):
@@ -95,13 +103,11 @@ def correlation_matrix(df):
                 fmt=".2f"
 )
     plt.title("Correlation matrix")
-    plt.savefig("../reports/figures/correlation_matrix.png")
     logging.info("Loading correlation successful")
     plt.show()
     return correlation_matrix
 
-
- if __name__ == "__main__":
+if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 
     df = load_data()
@@ -113,11 +119,10 @@ def correlation_matrix(df):
     outlier_analysis(df,"duration")
     outlier_analysis(df,"day")
     outlier_analysis(df,"balance")
-
     correlation_matrix(df)
 
     split_data(df)
     X_train, X_test, y_train, y_test = split_data(df)
     transformers(X_train, X_test)
 
-    
+    #python -m project_2.modeling.features
