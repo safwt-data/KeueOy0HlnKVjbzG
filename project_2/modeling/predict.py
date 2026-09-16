@@ -13,7 +13,6 @@ from project_2.modeling.train import ordinal_vars
 from project_2.modeling.train import split_data
 from project_2.modeling.train import transformers
 from project_2.modeling.train import over_sampling
-from project_2.modeling.train import nominal_vars
 from project_2.modeling.train import train_model
 
 def make_predictions(model, X_test):
