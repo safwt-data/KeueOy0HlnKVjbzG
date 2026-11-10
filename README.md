@@ -140,29 +140,34 @@ Values recorded as `"unknown"` in selected fields were treated as missing values
 
 ## 2. Customer Segmentation
 
-Before modeling, customer groups were examined to identify segments with stronger-than-average subscription behavior.
 
-The overall subscription rate is **7.24%**, which provides a useful baseline for evaluating each segment.
+K-Means grouped subscribers into seven clusters. The table summarizes each cluster using the original, unscaled data.
 
-Segments were constructed using combinations of customer and campaign characteristics, and each segment was evaluated using:
+| Cluster | Segment | Avg. age | Avg. balance | Housing loan | Personal loan | Key finding |
+|---|---|---:|---:|---:|---:|---|
+| 0 | Personal loan holders | 38.7 | 719 | 58.6% | 100% | Every customer in this cluster has a personal loan. |
+| 1 | Tertiary-educated customers | 35.4 | 1,446 | 42.5% | 0% | At least 78% have tertiary education. |
+| 2 | Older customers with few loans | 52.5 | 1,659 | 0.7% | 0% | This is the oldest cluster, and fewer than 1% have a housing loan. |
+| 3 | Customers marked in default | 37.9 | −120 | 55.1% | 30.6% | Everyone is marked `default = yes`. This cluster has the only negative average balance. |
+| 4 | Youngest and mostly single | 31.0 | 1,022 | 49.2% | 0% | This is the youngest cluster, and at least 86% are single. |
+| 5 | Housing loan holders | 41.3 | 1,287 | 99.8% | 0% | Nearly everyone has a housing loan. |
+| 6 | High-balance customers | 40.2 | 14,610 | 42.3% | 4.2% | The average balance is nearly nine times the next highest. |
 
-- **Subscription rate**
-- **Number of customers**
+Loan percentages show the share of customers marked `yes` in each cluster. The education and marital percentages are lower bounds derived from the encoded averages. Job profiles require category counts within each cluster.
 
-Small segments were filtered out to avoid making business recommendations from very limited samples.
+### Customer Segment Profiles
 
-### Highest-performing segments identified
+K-Means grouped subscribers into seven clusters. The profiles below describe what distinguishes each group using the original, unscaled data.
 
-| Segment | Subscription Rate | Customers |
-|---|---:|---:|
-| Management, tertiary education, no credit default, housing loan, no personal loan, cellular contact in May | **12.08%** | 480 |
-| Services, secondary education, no credit default, housing loan, no personal loan, cellular contact in May | **11.33%** | 415 |
-| Admin, secondary education, no credit default, housing loan, no personal loan, cellular contact in May | **11.16%** | 421 |
-| Blue-collar, secondary education, no credit default, housing loan, no personal loan, cellular contact in May | **7.27%** | 729 |
-
-The first three segments substantially outperform the **7.24% overall subscription baseline**.
-
-This part of the project translates model-oriented analysis into a more directly actionable marketing question: **who should receive greater attention?**
+| Cluster | Segment | What distinguishes this group | Nearest job and marital labels |
+|---|---|---|---|
+| 0 | Personal loan holders | Every customer has a personal loan, and 58.6% also have a housing loan. The average balance is 719. | Blue-collar, married |
+| 1 | Tertiary-educated customers | At least 78% have tertiary education. Customers average 35.4 years of age, and none have a personal loan. | Technician, single |
+| 2 | Older customers with few loans | This is the oldest group, with an average age of 52.5. Only 0.7% have a housing loan, and none have a personal loan. | Blue-collar, married |
+| 3 | Customers marked in default | Every customer is marked `default = yes`. This is the only group with a negative average balance (−120), and 30.6% have a personal loan. | Blue-collar, married |
+| 4 | Youngest and mostly single | This is the youngest group, with an average age of 31. At least 86% are single, and 49.2% have a housing loan. | Services, single |
+| 5 | Housing loan holders | Nearly everyone (99.8%) has a housing loan, and none have a personal loan. | Blue-collar, married |
+| 6 | High-balance customers | The average balance is 14,610, nearly nine times the next highest cluster average. Only 4.2% have a personal loan. | Entrepreneur, married |
 
 ---
 
